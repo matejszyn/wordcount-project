@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <style media="screen">
+    body {
+      background-color: #EBE5B9
+    }
+    h1,h2 {
+      color:rgb(100,0,0)
+    }
+    textarea {
+      background: #E8E6D8; /* This ruins default border */
+      border: 1px solid #888;
+    }
+    a {
+      color: rgb(200,0,0)
+    }
+  </style>
+  <head>
+    <meta charset="utf-8">
+    <title>BlaBlaDor v0.1</title>
+  </head>
+  <body>
+    <h1>BlaBlaDor v1.0</h1>
+    <h2>Wpisz tekst</h2>
+    <br>
+    <form action="{% url 'count' %}">
+      <textarea name="fulltext" rows="10" cols="100"></textarea>
+      <br>
+      <br>
+      <!-- Policz częstotliwość występowania:
+      <br>
+      <input type="radio" name="slowaczyznaki" value="slowa"> Słów
+      <input type="radio" name="slowaczyznaki" value="znaki"> Znaków
+      <br>
+      <br> -->
+      <br>
+      <input type="submit" value="Licz!" />
+      <br>
+      <br>
+      <br>
+      <a href="{% url 'about' %}">O projekcie...</a>
+    </form>
+  </body>
+</html>

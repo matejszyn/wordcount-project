@@ -1,0 +1,32 @@
+<style media="screen">
+  body {
+    background-color: #EBE5B9
+  }
+  h2 {
+    color:rgb(100,0,0)
+  }
+  textarea {
+    background: #E8E6D8; /* This ruins default border */
+    border: 1px solid #888;
+  }
+  a {
+    color: rgb(200,0,0)
+  }
+</style>
+
+<h2>{{ count }} - ilość słów w podanym tekście</h2>
+
+<a href="{% url 'home' %}">Zacznij jeszcze raz</a>
+
+<h2>Oryginalny tekst</h2>
+{{ fulltext }}
+
+<h2>Policzone słowa</h2>
+{% for word, counttotal in sortedwords %}
+
+  {{ word }} - {{ counttotal }}
+  <br />
+
+
+
+{% endfor %}
